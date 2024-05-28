@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 // Component to display a single post based on the slug
@@ -11,11 +12,11 @@ function Post({ post }) {
             Title:
             {post.id}.{post.title}
           </h1>
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1506157786151-b8491531f063"
             alt="image"
             className="mb-8"
-          ></img>
+          ></Image>
 
           <p>{post.body}</p>
         </div>
