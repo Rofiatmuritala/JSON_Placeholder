@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import image2 from "../../public/mountain.jpg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,10 +10,12 @@ export default function Home() {
     <>
       <main>
         <div class="relative max-w-xl mx-auto mt-20">
-          <img
+          <Image
             class="h-64 w-full object-cover rounded-md"
-            src="https://images.unsplash.com/photo-1680725779155-456faadefa26"
+            src={image2}
             alt="Random image"
+            width={800}
+            height={800}
           />
           <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
           <div class="absolute inset-0 flex items-center justify-center">

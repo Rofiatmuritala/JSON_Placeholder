@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import image1 from ".././../../public/egg.jpg";
 
 // Component to display a single post based on the slug
 function Post({ post }) {
@@ -8,15 +9,17 @@ function Post({ post }) {
       <h1 className="text-center text-4xl pt-8 capitalize font-bold">post</h1>
       <div className=" container flex flex-col p-5 lg:px-48">
         <div className=" border-1 md:rounded-lg p-8 md:m-12 bg-gray-100">
-          <h1 className="font-bold mb-8 md:text-2xl">
+          <h1 className="font-bold mb-8 md:text-2xl capitalize">
             Title:
-            {post.id}.{post.title}
+            {post.title}
           </h1>
           <Image
-            src="https://images.unsplash.com/photo-1506157786151-b8491531f063"
+            src={image1}
             alt="image"
+            width={800}
+            height={800}
             className="mb-8"
-          ></Image>
+          />
 
           <p>{post.body}</p>
         </div>
